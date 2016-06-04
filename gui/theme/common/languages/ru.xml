@@ -260,12 +260,12 @@
 		<string name="decrypt_data_btn">Расшифровать данные</string>
 		<string name="disable_mtp_btn">Выключить MTP</string>
 		<string name="enable_mtp_btn">Включить MTP</string>
-		<string name="mount_usb_storage_btn">Включить UMS</string>
+		<string name="mount_usb_storage_btn">Включить USB</string>
 		<string name="usb_storage_hdr">USB накопитель</string>
 		<string name="usb_stor_mnt1">Режим USB накопителя включен</string>
 		<string name="usb_stor_mnt2">Перед отключением вашего устройства от компьютера,</string>
-		<string name="usb_stor_mnt3">выполните размонтирование (выключите UMS)!</string>
-		<string name="unmount_btn">Выключить UMS</string>
+		<string name="usb_stor_mnt3">выполните размонтирование (выключите USB)!</string>
+		<string name="unmount_btn">Выключить USB</string>
 		<string name="rb_system_btn">Система</string>
 		<string name="rb_poweroff_btn">Выключение</string>
 		<string name="rb_recovery_btn">Рекавери</string>
