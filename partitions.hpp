@@ -165,7 +165,7 @@ private:
 	bool Make_Dir(string Path, bool Display_Error);                           // Creates a directory if it doesn't already exist
 	bool Find_MTD_Block_Device(string MTD_Name);                              // Finds the mtd block device based on the name from the fstab
 	void Recreate_AndSec_Folder(void);                                        // Recreates the .android_secure folder
-	void Mount_Storage_Retry(void);                                           // Tries multiple times with a half second delay to mount a device in case storage is slow to mount
+	bool Mount_Storage_Retry(bool Display_Error);                             // Tries multiple times with a half second delay to mount a device in case storage is slow to mount
 	bool Is_Sparse_Image(const string& Filename);                             // Determines if a file is in sparse image format
 	bool Flash_Sparse_Image(const string& Filename);                          // Flashes a sparse image using simg2img
 	bool Flash_Image_FI(const string& Filename, ProgressTracking *progress);  // Flashes an image to the partition using flash_image for mtd nand
@@ -294,7 +294,7 @@ public:
 private:
 	void Setup_Settings_Storage_Partition(TWPartition* Part);                 // Sets up settings storage
 	void Setup_Android_Secure_Location(TWPartition* Part);                    // Sets up .android_secure if needed
-	bool Make_MD5(bool generate_md5, string Backup_Folder, string Backup_Filename); // Generates an MD5 after a backup is made
+	bool Make_MD5(struct PartitionSettings *part_settings); // Generates an MD5 after a backup is made
 	bool Backup_Partition(struct PartitionSettings *part_settings);                  // Backup the partitions based on type
 	void Output_Partition(TWPartition* Part);                                 // Outputs partition details to the log
 	TWPartition* Find_Partition_By_MTP_Storage_ID(unsigned int Storage_ID);   // Returns a pointer to a partition based on MTP Storage ID
